@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from data_grabbers.cases_data_grabber import CasesDataGrabber
+from data_grabbers.cases_data_grabber_germany import GERCasesDataGrabber
 from data_grabbers.deaths_data_grabber import DeathsDataGrabber
 from models.NeuralNetModel import NeuralNetModel
 from models.PolynomialRegressionModel import PolynomialRegressionModel
@@ -67,7 +68,7 @@ def print_stats(model_config, x, y, model):
     if isinstance(model, PolynomialRegressionModel):
         print("The " + model_config["model_name"] + " model function is: f(X) = " + model.get_model_polynomial_str())
 
-    plot_graph(model_config["model_name"], x, y, y_pred)
+    #plot_graph(model_config["model_name"], x, y, y_pred)
     print("")
 
 def model_handler(model_config):

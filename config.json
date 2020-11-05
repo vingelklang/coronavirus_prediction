@@ -1,7 +1,7 @@
 {
     "models": [
         {
-            "enabled": true,
+            "enabled": false,
             "model_name": "Cases",
             "model": {
                 "type": "neural_net",
@@ -21,6 +21,37 @@
         },
         {
             "enabled": true,
+            "model_name": "Germany Cases",
+            "model": {
+                "type": "neural_net",
+                "alpha": 1e-6,
+                "hidden_layer_sizes": "auto",
+                "learning_rate_init": 0.008,
+                "max_iter": 50000,
+                "batch_size": 32,
+                "tol": 1e-6,
+                "n_iter_no_change": 250,
+                "verbose": false
+            },
+            "datagrabber_class": "GERCasesDataGrabber",
+            "grab_data_from_server": true,
+            "offline_dataset_date": "2020-09-21",
+            "days_to_predict": 30
+        },
+        {
+            "enabled": false,
+            "model_name": "Germany Cases Polyreg",
+            "model": {
+                "type": "regression",
+                "polynomial_degree": 4
+            },
+            "datagrabber_class": "GERCasesDataGrabber",
+            "grab_data_from_server": true,
+            "offline_dataset_date": "2020-09-21",
+            "days_to_predict": 10
+        },        
+        {
+            "enabled": false,
             "model_name": "Deaths",
             "model": {
                 "type": "neural_net",
