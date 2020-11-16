@@ -27,11 +27,11 @@
                 "alpha": 1e-6,
                 "hidden_layer_sizes": "auto",
                 "learning_rate_init": 0.0008,
-                "max_iter": 500000,
+                "max_iter": 50000,
                 "batch_size": 32,
                 "tol": 1e-6,
                 "n_iter_no_change": 250,
-                "verbose": true
+                "verbose": false
             },
             "datagrabber_class": "GERCasesDataGrabber",
             "grab_data_from_server": true,
@@ -39,7 +39,7 @@
             "days_to_predict": 30
         },
         {
-            "enabled": true,
+            "enabled": false,
             "model_name": "Germany Cases Polyreg",
             "model": {
                 "type": "regression",
